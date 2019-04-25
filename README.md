@@ -1,7 +1,5 @@
-# shiyanlou
-GitHub 课程测试
-Git
-
 | 课程ID | 课程名 | 主要知识内容 | 软件版本 |
 | :------ | :------              | :------ | :------     |
-| 1152    | Spring Boot 入门教程 | 1.Spring Boot 介绍<br>2.搭建Spring Boot应用: 讲解通过Spring Initializr和手动搭建Spring Boot项目两种方法，还有讲解Sping Boot中的starter<br>3.Spring Boot 配置文件简介:讲解Spring Boot中application.properties、java、xml的配置<br>4.Spring Boot Web 支持<br>5.Spring Boot 事务控制<br>6.Spring Boot aop的运用<br>7.Spring Boot 多数据源的配置<br>8.Spring Boot整合Mybatis开发<br>9. Profile 配置说明及线上部署         | Spring Boot 2.0.4<br>Maven 3.2+<br>JDK 1.8|
+| 1152    | Spring Boot 入门教程 | 1. Spring Boot 介绍<br>2. 搭建Spring Boot应用: 讲解通过Spring Initializr和手动搭建Spring Boot项目两种方法，还有讲解Sping Boot中的starter<br>3. Spring Boot 配置文件简介:讲解Spring Boot中application.properties、java、xml的配置<br>4. Spring Boot Web 支持: Spring Boot MVC的基本配置和Spring Boot静态资源<br>5. Spring Boot 事务控制:讲解了事务的相关概念，并且学会使用Spring Boot 进行事务控制<br>6. Spring Boot aop的运用:学习Spring Boot aop的基本使用,同时学会了如何使用aop去控制事务<br>7. Spring Boot 多数据源的配置: 学习Spring Boot多数据源的配置<br>8. Spring Boot整合Mybatis开发:结合Mybatis开发简单的restful风格的web项目<br>9. Profile 配置说明及线上部署: 介绍Spring Boot 的Profile 配置，以及Spring Boot的打包部署         | Spring Boot 2.0.4<br>Maven 3.2+<br>MySQL 5.7.24<br>Mybatis 1.3.2<br>JDK 1.8|
+| 110    | JDBC 入门教程  | 1. 认识JDBC: 学习JDBC的相关知识，回顾SQL语法，并搭建JDBC的环境<br>2. JDBC基础: 学习JDBC驱动类型以及JDBC连接数据库的相关知识<br>3. JDBC接口: 学习Statement、PreparedStatement、CallableStatement等JDBC接口的相关知识<br>4. JDBC结果集: 学习java.sql.ResultSet接口，即数据库查询的结果集相关的知识<br>5. JDBC数据类型与事务: 学习Java数据类型对应的JDBC类型以及JDBC事务的管理的知识<br>6. JDBC处理: 学习JDBC异常处理、批量处理的相关知识|JDK 1.8<br>MySQL 5.7|
+| 109    | JDK 核心 API  | 1. java.lang包: 讲解java.lang 包中常用的类的使用<br>2. java日期和随机数: 学习Java的Date、Calendar、Random、LocalTime类的相关知识<br>3. Java 集合框架: 学习Java集合框架里的接口、具体类的相关知识<br>4. java.io 包——字节流: 介绍字节流的基类、文件流、过滤流、标准流、内存读写流、顺序输出流等知识<br>5. java.io 包——字符流: 学习字符流中的基本类和缓存流，以及字符流的其他类<br>6. 文件操作/随机访问文件: 学习java.io包下的文件操作和随机访问的相关知识<br>7. Swing 入门: 学习GUI和MVC的一些知识，初步了解如何建立一个带图形界面的应用程序<br>8. 多线程编程: 学习线程的生命周期及其状态的理解，并通过两种不同的方式创建线程|JDK 1.8|
