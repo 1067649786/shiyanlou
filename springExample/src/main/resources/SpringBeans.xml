@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:annotation-config/>
+
+    <context:component-scan base-package="com.shiyanlou.demo.config"/>
+
+    <bean id="personBean" class="com.shiyanlou.demo.entity.Person">
+        <property name="name" value="jack"/>
+        <property name="age" value="18"/>
+    </bean>
+
+    <bean id="dogBean" class="com.shiyanlou.demo.entity.Dog">
+        <property name="name" value="tom"/>
+<!--        <property name="person" ref="personBean"/>-->
+    </bean>
+
+    <bean id="hello1" class="com.shiyanlou.demo.service.HelloImpl1"/>
+
+    <bean id="hello2" class="com.shiyanlou.demo.service.HelloImpl2"/>
+
+    <bean id="helloWorld" class="com.shiyanlou.demo.helloworld.HelloWorld">
+        <!--<property name="Message" value="Hello World!"/>-->
+    </bean>
+
+    <bean id="msg" class="java.lang.String">
+        <constructor-arg index="0" value="Hello World!"></constructor-arg>
+    </bean>
+
+</beans>
