@@ -1,0 +1,17 @@
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/config/CustomMetadataSource.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/bean/MenuMeta.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/common/HrUtils.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/mapper/HrMapper.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/config/AuthenticationAccessDeniedHandler.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/bean/RespBean.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/bean/Hr.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/service/MenuService.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/bean/Role.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/App.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/mapper/MenuMapper.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/controller/ConfigController.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/config/WebSecurityConfig.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/service/HrService.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/config/UrlAccessDecisionManager.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/controller/RegLoginController.java
+/home/project/vhr/src/main/java/com/shiyanlou/vhr/bean/Menu.java
