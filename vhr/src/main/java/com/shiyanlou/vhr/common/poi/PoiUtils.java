@@ -34,9 +34,9 @@ public class PoiUtils {
             //3.1文档类别
             dsi.setCategory("员工信息");
             //3.2设置文档管理员
-            dsi.setManager("江南一点雨");
+            dsi.setManager("实验楼");
             //3.3设置组织机构
-            dsi.setCompany("XXX集团");
+            dsi.setCompany("实验楼");
             //4.获取摘要信息并配置
             SummaryInformation si = workbook.getSummaryInformation();
             //4.1设置文档主题
@@ -44,7 +44,7 @@ public class PoiUtils {
             //4.2.设置文档标题
             si.setTitle("员工信息");
             //4.3 设置文档作者
-            si.setAuthor("XXX集团");
+            si.setAuthor("实验楼");
             //4.4设置文档备注
             si.setComments("备注信息暂无");
             //创建Excel表单
