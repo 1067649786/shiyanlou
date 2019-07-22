@@ -271,4 +271,8 @@
         </foreach>
     </insert>
 
+    <select id="getEmpById" resultMap="BaseResultMap">
+        select * from employee where id=#{id};
+    </select>
+
 </mapper>

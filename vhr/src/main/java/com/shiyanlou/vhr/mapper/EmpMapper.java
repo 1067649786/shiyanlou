@@ -30,5 +30,7 @@ public interface EmpMapper {
 
     int addEmps(@Param("emps") List<Employee> emps);
 
+    Employee getEmpById(Long Id);
+
 
 }

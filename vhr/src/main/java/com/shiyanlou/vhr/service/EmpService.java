@@ -97,4 +97,8 @@ public class EmpService {
     public int addEmps(List<Employee> emps) {
         return empMapper.addEmps(emps);
     }
+
+    public Employee getEmpById(Long id){
+        return empMapper.getEmpById(id);
+    }
 }
