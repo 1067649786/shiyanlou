@@ -14,6 +14,8 @@ public interface PersonnelMapper {
 
     int addEc(EmpEc empEc);
 
+    List<EmpEc> getAllEmpEc();
+
 
     int addEmpTrain(@Param("empTrain") EmpTrain empTrain);
 

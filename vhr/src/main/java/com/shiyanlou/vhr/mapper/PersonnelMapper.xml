@@ -9,6 +9,10 @@
         values (#{eid},#{ecDate},#{ecReason},#{ecType},#{remark});
     </insert>
 
+    <select id="getAllEmpEc" resultType="com.shiyanlou.vhr.bean.EmpEc">
+        select * from employeeec;
+    </select>
+
     <select id="getAllEmpTrains" resultType="com.shiyanlou.vhr.bean.EmpTrain">
         select * from employeetrain;
     </select>

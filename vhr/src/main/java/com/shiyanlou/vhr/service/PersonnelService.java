@@ -22,6 +22,10 @@ public class PersonnelService {
         return personnelMapper.addEc(empEc);
     }
 
+    public List<EmpEc> getAllEmpEc(){
+        return personnelMapper.getAllEmpEc();
+    }
+
     public int addEmpTrain(EmpTrain empTrain){
         return personnelMapper.addEmpTrain(empTrain);
     }
