@@ -21,4 +21,11 @@ public interface SalaryMapper {
 
     int addSidAndEid(@Param("sid") Integer sid, @Param("eid") Long eid);
 
+    Salary getSalaryById(Long id);
+
+    int getLeaveCount(Long eid);
+
+    int getLateCount(Long eid);
+
+    int getOvertime(Long eid);
 }
