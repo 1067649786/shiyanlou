@@ -101,4 +101,9 @@ public class EmpService {
     public Employee getEmpById(Long id){
         return empMapper.getEmpById(id);
     }
+
+    public List<Employee> getEmployeeByPageShort(Integer page, Integer size) {
+        int start = (page - 1) * size;
+        return empMapper.getEmployeeByPageShort(start,size);
+    }
 }
