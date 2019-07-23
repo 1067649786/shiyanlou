@@ -43,4 +43,91 @@
             #{id}
         </foreach>
     </delete>
+
+
+    <select id="getAllEmpMove" resultType="com.shiyanlou.vhr.bean.EmpMove">
+        select * from employeeremove;
+    </select>
+
+    <insert id="addEmpMove" parameterType="com.shiyanlou.vhr.bean.EmpMove">
+        insert into employeeremove(eid,afterDepId,afterJobId,removeDate,reason,remark)
+        values (#{empMove.eid},#{empMove.afterDepId},
+        #{empMove.afterJobId},#{empMove.removeDate},
+        #{empMove.reason},#{empMove.remark});
+    </insert>
+
+    <update id="updateEmpMove" parameterType="com.shiyanlou.vhr.bean.EmpMove">
+        update employeeremove
+        <set>
+            <if test="empMove.eid != null and empMove.eid != ''">
+                eid = #{empMove.eid},
+            </if>
+            <if test="empMove.afterDepId != null and empMove.afterDepId != ''">
+                afterDepId = #{empMove.afterDepId},
+            </if>
+            <if test="empMove.afterJobId != null and empMove.afterJobId != ''">
+                afterJobId = #{empMove.afterJobId},
+            </if>
+            <if test="empMove.removeDate != null and empMove.removeDate != ''">
+                removeDate = #{empMove.removeDate},
+            </if>
+            <if test="empMove.reason != null and empMove.reason != ''">
+                reason = #{empMove.reason},
+            </if>
+            <if test="empMove.remark != null and empMove.remark != ''">
+                remark = #{empMove.remark},
+            </if>
+        </set>
+        where id = #{empMove.id}
+    </update>
+
+    <update id="updateDepIdAndJobId" parameterType="com.shiyanlou.vhr.bean.EmpMove">
+        update employee set departmentId=#{empMove.afterDepId},jobLevelId=#{empMove.afterJobId}
+        where id=#{empMove.eid}
+    </update>
+
+
+    <insert id="addAdjustSalary" parameterType="com.shiyanlou.vhr.bean.AdjustSalary">
+        insert into adjustsalary(eid,asDate,beforeSalary,afterSalary,reason,remark)
+        values (#{adjustSalary.eid},#{adjustSalary.asDate},
+        #{adjustSalary.beforeSalary},#{adjustSalary.afterSalary},
+        #{adjustSalary.reason},#{adjustSalary.remark})
+    </insert>
+
+    <update id="updateAdjustSalary" parameterType="com.shiyanlou.vhr.bean.AdjustSalary">
+        update adjustsalary
+        <set>
+            <if test="adjustSalary.eid != null">
+                eid = #{adjustSalary.eid},
+            </if>
+            <if test="adjustSalary.asDate != null">
+                asDate = #{adjustSalary.asDate},
+            </if>
+            <if test="adjustSalary.beforeSalary != null">
+                beforeSalary = #{adjustSalary.beforeSalary},
+            </if>
+            <if test="adjustSalary.afterSalary != null">
+                afterSalary = #{adjustSalary.afterSalary},
+            </if>
+            <if test="adjustSalary.reason != null">
+                reason = #{adjustSalary.reason},
+            </if>
+            <if test="adjustSalary.remark != null">
+                remark = #{adjustSalary.remark},
+            </if>
+        </set>
+        where id = #{adjustSalary.id}
+    </update>
+
+    <delete id="deleteAdjustSalary">
+        DELETE FROM adjustsalary WHERE id IN
+        <foreach collection="ids" separator="," item="id" open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="getAllAdjustSalary" resultType="com.shiyanlou.vhr.bean.AdjustSalary">
+        select * from adjustsalary;
+    </select>
+
 </mapper>

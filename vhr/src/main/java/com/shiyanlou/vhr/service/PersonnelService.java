@@ -1,6 +1,8 @@
 package com.shiyanlou.vhr.service;
 
+import com.shiyanlou.vhr.bean.AdjustSalary;
 import com.shiyanlou.vhr.bean.EmpEc;
+import com.shiyanlou.vhr.bean.EmpMove;
 import com.shiyanlou.vhr.bean.EmpTrain;
 import com.shiyanlou.vhr.mapper.PersonnelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,5 +39,39 @@ public class PersonnelService {
         return personnelMapper.getAllEmpTrains();
     }
 
+
+    public int addAdjustSalary(AdjustSalary adjustSalary){
+        return personnelMapper.addAdjustSalary(adjustSalary);
+    }
+
+    public int updateAdjustSalary(AdjustSalary adjustSalary){
+        return personnelMapper.updateAdjustSalary(adjustSalary);
+    }
+
+    public int deleteAdjustSalary(String ids){
+        String[] split = ids.split(",");
+        return personnelMapper.deleteAdjustSalary(split);
+    }
+
+    public List<AdjustSalary> getAllAdjustSalary(){
+        return personnelMapper.getAllAdjustSalary();
+    }
+
+
+    public int addEmpMove(EmpMove empMove){
+        return personnelMapper.addEmpMove(empMove);
+    }
+
+    public int updateEmpMove(EmpMove empMove){
+        return personnelMapper.updateEmpMove(empMove);
+    }
+
+    public List<EmpMove> getAllEmpMove(){
+        return personnelMapper.getAllEmpMove();
+    }
+
+    public int updateDepIdAndJobId(EmpMove empMove){
+        return personnelMapper.updateDepIdAndJobId(empMove);
+    }
 
 }
