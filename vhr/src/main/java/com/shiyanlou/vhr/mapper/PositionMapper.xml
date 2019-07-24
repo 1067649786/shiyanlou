@@ -6,4 +6,18 @@
     <select id="getAllPos" resultType="com.shiyanlou.vhr.bean.Position">
         SELECT * FROM position WHERE enabled=true ORDER BY id;
     </select>
+
+    <insert id="addPos" parameterType="com.shiyanlou.vhr.bean.Position">
+        INSERT INTO position set name=#{pos.name}
+    </insert>
+
+    <delete id="deletePosById">
+        DELETE FROM position WHERE id IN
+        <foreach collection="pids" item="pid" separator="," open="(" close=")">
+            #{pid}
+        </foreach>
+    </delete>
+    <update id="updatePosById">
+        UPDATE position set name=#{pos.name} WHERE id=#{pos.id}
+    </update>
 </mapper>

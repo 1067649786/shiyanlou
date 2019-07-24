@@ -15,6 +15,19 @@ public class DepartmentService {
     @Autowired
     DepartmentMapper departmentMapper;
 
+    public int addDep(Department department) {
+        department.setEnabled(true);
+        departmentMapper.addDep(department);
+        return department.getResult();
+    }
+
+    public int deleteDep(Long did) {
+        Department department = new Department();
+        department.setId(did);
+        departmentMapper.deleteDep(department);
+        return department.getResult();
+    }
+
     public List<Department> getDepByPid(Long pid){
         return departmentMapper.getDepByPid(pid);
     }

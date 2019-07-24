@@ -6,4 +6,31 @@
     <select id="getAllJobLevels" resultType="com.shiyanlou.vhr.bean.JobLevel">
         select * from joblevel WHERE enabled=true;
     </select>
+
+    <select id="getJobLevelByName" parameterType="string" resultType="com.shiyanlou.vhr.bean.JobLevel">
+        select * from joblevel WHERE name=#{name};
+    </select>
+    <insert id="addJobLevel" parameterType="com.shiyanlou.vhr.bean.JobLevel">
+        INSERT INTO joblevel SET name=#{jobLevel.name},titleLevel=#{jobLevel.titleLevel}
+    </insert>
+
+    <delete id="deleteJobLevelById">
+        DELETE FROM joblevel WHERE id IN
+        <foreach collection="ids" item="id" close=")" open="(" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+    <update id="updateJobLevel">
+        UPDATE joblevel
+        <set>
+            <if test="jobLevel.name!=null">
+                name=#{jobLevel.name},
+            </if>
+            <if test="jobLevel.titleLevel!=null">
+                titleLevel=#{jobLevel.titleLevel},
+            </if>
+        </set>
+        WHERE id=#{jobLevel.id}
+    </update>
+
 </mapper>

@@ -15,7 +15,24 @@ public class PositionService {
     @Autowired
     PositionMapper positionMapper;
 
+    public int addPos(Position pos) {
+        if (positionMapper.getPosByName(pos.getName()) != null) {
+            return -1;
+        }
+        return positionMapper.addPos(pos);
+    }
+
     public List<Position> getAllPos() {
         return positionMapper.getAllPos();
     }
+
+    public boolean deletePosById(String pids) {
+        String[] split = pids.split(",");
+        return positionMapper.deletePosById(split) == split.length;
+    }
+
+    public int updatePosById(Position position) {
+        return positionMapper.updatePosById(position);
+    }
+
 }
