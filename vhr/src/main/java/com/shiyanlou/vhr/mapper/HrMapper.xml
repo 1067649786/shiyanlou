@@ -97,4 +97,11 @@
         DELETE FROM hr WHERE id=#{hrId}
     </delete>
 
+    <select id="getAllHr" resultType="com.shiyanlou.vhr.bean.Hr">
+        select * from hr
+        <if test="currentId!=null">
+            WHERE id !=#{currentId}
+        </if>
+    </select>
+
 </mapper>

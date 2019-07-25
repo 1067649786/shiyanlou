@@ -28,4 +28,5 @@ public interface HrMapper {
 
     int hrReg(@Param("username") String username, @Param("password") String password);
 
+    List<Hr> getAllHr(@Param("currentId") Long currentId);
 }
